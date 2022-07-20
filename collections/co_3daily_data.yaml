@@ -12,8 +12,9 @@ EDCBrowser: ""
 Resolution: 4.8 x 4.8 Km (across x along track)
 GeographicalCoverage: -180.0, -90.0, 180.0, 90.0
 TemporalAvailability: 2018-04-30 - ongoing
+TemporalResolution: 3 days
 UpdateFrequency: daily
-BandInformation: co
+BandInformation: it is a single band called "co" that represents the averaged carbon monoxide concentrations see this document for more details https://sentinels.copernicus.eu/documents/247904/3541451/Sentinel-5P-Carbon-Monoxide-Level-2-Product-Readme-File
 Contact: "[ESA EO Support Helpdesk](EOSupport@copernicus.esa.int)"
 Provider: "[ESA](http://www.esa.int/)"
 ManagedBy: "[ESA](http://www.esa.int/)"
@@ -55,7 +56,7 @@ Extent:
     interval:
       -
         - '2018-04-30T00:00:00Z'
-        - null
+        - ongoing
 CubeDimensions:
   x:
     type: spatial
@@ -73,7 +74,7 @@ CubeDimensions:
     type: temporal
     extent:
       - '2018-04-30T00:00:00Z'
-      - null
+      - ongoing
     step: P3D
   bands:
     type: bands
