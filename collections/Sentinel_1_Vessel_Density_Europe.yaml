@@ -1,0 +1,82 @@
+Name: Sentinel_1_Vessel_Density_Europe
+OpenEOPID: CIMBELLI_SENTINEL1_VESSEL_DENSITY
+Description: "The Sentinel 1 based Vessel Density maps in the EU are created since the 2020 as outcome of the  by Cogea for the European Marine Observation and Data Network (EMODnet). The dataset is updated every year and is available for viewing and download on EMODnet Human Activities web portal (www.emodnet-humanactivities.eu). The maps are based on AIS data yearly purchased from Collecte Localisation Satellites (CLS) and ORBCOMM. The maps, GeoTIFF format, show shipping density in 1x1km cells of a grid covering all EU waters and some neighbouring areas. Density is expressed as hours per square kilometre per month. The following ship types are available:0 Other, 1 Fishing, 2 Service, 3 Dredging or underwater ops, 4 Sailing, 5 Pleasure Craft, 6 High speed craft, 7 Tug and towing, 8 Passenger, 9 Cargo, 10 Tanker, 11 Military and Law Enforcement, 12 Unknown and All ship types.
+  This particular layer refers to EMODnet ship type "All" that includes all the AIS ship Type codes.
+AdditionalInfoExternal:
+  Title: Additional info
+  Path: Sentinel_1_Vessel_Density_Europe/README.md
+Image: Sentinel_1_Vessel_Density_Europe/Sentinel_1_Vessel_Density_Europe.png
+EDCBrowser: ""
+Resolution: 0.0083 x 0.0083°
+GeographicalCoverage: -15.633767358, 27.339996148, 30.119125533, 60.843621256
+TemporalAvailability: 2020-01-01 - 2022-12-01
+BandInformation: vessels
+Contact: ""
+Provider: ""
+ManagedBy: "[ESA](http://www.esa.int/)"
+Tags:
+  - copernicus services
+  - C3S
+  - open data
+  - sentinel hub
+  - raster
+  - race challenges
+License: |
+  bbbbbbbbb
+Resources:
+ - Group: Sentinel Hub Resources
+ - EndPoint: https://services.sentinel-hub.com
+   Name: Sentinel Hub
+   Role: processor
+   Type: byoc-e60efbac-5b67-4162-a929-9e76e9c0da0f
+   CollectionId: e60efbac-5b67-4162-a929-9e76e9c0da0f
+   Primary: True
+Configurations:
+  - href: "https://docs.sentinel-hub.com/api/latest/api/process/"
+    rel: "about"
+    type: "text/html"
+    title: "Details about running Evalscripts"
+  - href: "https://raw.githubusercontent.com/eurodatacube/public-collections/main/collections/Sentinel_1_Vessel_Density_Europe/script.js"
+    rel: "processing-expression"
+    type: "application/javascript"
+    title: "Evalscript to generate Vessel Density imagery"
+    sentinelhub:layer_name: "Sentinel_1_Vessel_Density_Europe"
+    sentinelhub:mosaicking_order: "mostRecent"
+    sentinelhub:upsampling: "BICUBIC"
+Extent:
+  spatial:
+    bbox:
+      -
+        - -15.633767358
+        - 27.339996148
+        - 30.119125533
+        - 60.843621256
+  temporal:
+    interval:
+      -
+        - '2020-01-01T00:00:00Z'
+        - '2022-12-01T00:00:00Z'
+CubeDimensions:
+  x:
+    type: spatial
+    axis: x
+    extent:
+      - 30.119125533
+      - 60.843621256
+  y:
+    type: spatial
+    axis: y
+    extent:
+      - -15.633767358
+      - 27.339996148
+  t:
+    type: temporal
+    extent:
+      - '2020-01-01T00:00:00Z'
+      - '2022-12-01T00:00:00Z'
+  bands:
+    type: bands
+    values:
+      - vessels
+RegistryEntryAdded: "2023-01-20"
+RegistryEntryLastModified: "2023-01-20"
