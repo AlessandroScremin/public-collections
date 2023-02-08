@@ -1,4 +1,5 @@
 Name: Sentinel-3 SLSTR L1B
+OpenEOPID: SENTINEL3_SLSTR
 Description: |
  The [Sentinel -3](https://sentinel.esa.int/web/sentinel/missions/sentinel-3) is composed of three versatile satellites designed 
  to provide data continuity for the ERS, ENVISAT and SPOT satellites and to support operational land and ocean observation services.
@@ -8,7 +9,7 @@ Description: |
  The principal objective of SLSTR products is to provide global and regional Sea and Land Surface Temperature (SST, LST) 
  to a very high level of accuracy (better than 0.3 K for SST) for both climatological and meteorological applications.
  Level 1B provides calibrated and ortho-geolocated Top Of Atmosphere (TOA) radiances for the 6 VNIR/SWIR bands 
- and TOA brightness temperatures for the thermal IR and active fire channels. 
+ and TOA brightness temperatures for the thermal IR and active fire channels.
 Documentation: "[here](https://docs.sentinel-hub.com/api/latest/data/sentinel-3-slstr-l1b/)"
 Image: sentinel-3-l1b-slstr/sentinel-3-l1b-slstr.png
 EDCBrowser: https://browser.eurodatacube.com/?zoom=10&lat=41.9&lng=12.5&collectionId=sentinel-3-l1b-slstr&layerId=False%20Color%20based%20on%20bands%20S3%2C%20S2%2C%20and%20S1&type=sentinel-hub-edc&fromTime=2021-03-04T16%3A41%3A20.101Z&toTime=2022-03-04T16%3A41%3A20.101Z 
@@ -37,14 +38,14 @@ Tags:
   - copernicus
   - sentinel
 License: "[License](https://docs.sentinel-hub.com/api/latest/data/sentinel-3-slstr-l1b/#attribution-and-use)"
-LicenseType: proprietary 
+LicenseType: proprietary
 LicenseUrl: https://docs.sentinel-hub.com/api/latest/data/sentinel-3-slstr-l1b/#attribution-and-use
 Resources:
   - Group: Sentinel Hub Resources
   - EndPoint: https://creodias.sentinel-hub.com
     Name: Sentinel Hub
     Role: processor
-    Type: sentinel-3-slstr 
+    Type: sentinel-3-slstr
     Notes: Global since May 2016
     Primary: true
   - EndPoint: https://code-de.sentinel-hub.com
@@ -60,7 +61,7 @@ CustomScripts:
 WMTS:
   - href: https://creodias.sentinel-hub.com/ogc/wmts/cf579fd9-135d-4597-b7dc-72e67bb5cf13
     layer_id: F1-BRIGHTNESS-TEMPERATURE
-    dimensions: 
+    dimensions:
       warnings: true
 Configurations:
   - href: "https://docs.sentinel-hub.com/api/latest/api/process/"
@@ -147,6 +148,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: NDVI, vegetation monitoring, aerosol
       name: S2
       center_wavelength: 0.65947
@@ -156,6 +163,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: NDVI, cloud flagging, pixel co-registration
       name: S3
       center_wavelength: 0.868
@@ -165,6 +178,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: Cirrus detection over land
       name: S4
       center_wavelength: 1.3748
@@ -174,6 +193,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: Cloud clearing, ice, snow, vegetation monitoring
       name: S5
       center_wavelength: 1.6134
@@ -183,6 +208,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: Vegetation state and cloud clearing
       name: S6
       center_wavelength: 2.2557
@@ -192,6 +223,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: SST, LST, Active fire
       name: S7
       center_wavelength: 3.742
@@ -201,6 +238,12 @@ Summaries:
           - 0.009920634920333
           - 0.009920634920333
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 250
+        maximum:
+          - 320
     - description: SST, LST, Active fire
       name: S8
       center_wavelength: 10.854
@@ -210,6 +253,12 @@ Summaries:
           - 0.009920634920333
           - 0.009920634920333
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 250
+        maximum:
+          - 320
     - description: SST, LST
       name: S9
       center_wavelength: 12.0225
@@ -219,6 +268,12 @@ Summaries:
           - 0.009920634920333
           - 0.009920634920333
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 250
+        maximum:
+          - 320
     - description: Active fire
       name: F1
       center_wavelength: 3.742
@@ -228,6 +283,12 @@ Summaries:
           - 0.009920634920333
           - 0.009920634920333
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 250
+        maximum:
+          - 320
     - description: Active fire
       name: F2
       center_wavelength: 10.854
@@ -237,11 +298,26 @@ Summaries:
           - 0.009920634920333
           - 0.009920634920333
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 250
+        maximum:
+          - 320
     - description: The mask of data/no data pixels.
       name: dataMask
+      data_type: uint8
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
   gsd:
     - 500
     - 1000
+  eo:cloud_cover:
+    minimum: 0
+    maximum: 100
   platform:
     - sentinel-3a
     - sentinel-3b
@@ -388,4 +464,4 @@ CRS:
   - "http://www.opengis.net/def/crs/EPSG/0/32760"
   - "http://www.opengis.net/def/crs/SR-ORG/0/98739"
 RegistryEntryAdded: "2018-04-17"
-RegistryEntryLastModified: "2022-06-17"
+RegistryEntryLastModified: "2022-11-23"

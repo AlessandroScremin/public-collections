@@ -1,4 +1,5 @@
 Name: ICEYE_E11
+OpenEOPID: ICEYE_GRD_E11
 Description: Activity for Leisure industry reduced. Images from ICEYE
 AdditionalInfoExternal:
     Title: Additional info
@@ -50,8 +51,8 @@ Extent:
   temporal:
     interval:
       -
-        - '2020-03-20T00:00:00Z'
-        - '2020-03-20T23:59:59Z'
+        - '2020-03-20T14:27:20Z'
+        - '2020-03-20T14:27:21Z'
 CubeDimensions:
   x:
     type: spatial
@@ -68,11 +69,11 @@ CubeDimensions:
   t:
     type: temporal
     extent:
-      - '2020-03-20T00:00:00Z'
-      - '2020-03-20T23:59:59Z'
+      - '2020-03-20T14:27:20Z'
+      - '2020-03-20T14:27:21Z'
   bands:
     type: bands
     values:
       - GRD
 RegistryEntryAdded: "2021-05-07"
-RegistryEntryLastModified: "2022-04-01"
+RegistryEntryLastModified: "2022-07-19"

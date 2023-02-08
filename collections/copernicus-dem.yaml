@@ -1,6 +1,7 @@
 Name: Copernicus DEM
+OpenEOPID: COPERNICUS_30
 Description: |
-  [The Copernicus DEM](https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198) is a Digital Surface Model (DSM) 
+  [The Copernicus DEM](https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198) is a Digital Surface Model (DSM)
   which represents the bare-Earth surface and all above ground natural and built features.
   It is based on [WorldDEM™ ](https://www.intelligence-airbusds.com/imagery/reference-layers/worlddem/) DSM that is derived from [TanDEM-X](https://spacedata.copernicus.eu/web/cscda/data-offer/missions/tandem-x) 
   and is infilled on a local basis with the following DEMs: ASTER, SRTM90, SRTM30, SRTM30plus, GMTED2010, TerraSAR-X Radargrammetric DEM, ALOS World 3D-30m.
@@ -13,7 +14,7 @@ Documentation: "[here](https://docs.sentinel-hub.com/api/latest/data/dem/)"
 EDCBrowser: https://browser.eurodatacube.com/?zoom=7&lat=43.14975&lng=7.16013&collectionId=copernicus-dem&layerId=Color&type=sentinel-hub-edc&fromTime=2014-01-16T01%3A37%3A12.000Z&toTime=2015-01-16T01%3A37%3A12.000Z
 EOBrowser: https://apps.sentinel-hub.com/eo-browser/?zoom=10&lat=41.9&lng=12.5&themeId=DEFAULT-THEME&visualizationUrl=https%3A%2F%2Fservices.sentinel-hub.com%2Fogc%2Fwms%2F6448ffd0-56c5-4601-bed7-242bf75d97db&datasetId=DEM_COPERNICUS_30&fromTime=2021-04-08T00%3A00%3A00.000Z&toTime=2021-04-08T23%3A59%3A59.999Z&layerId=COLOR
 Image: copernicus-dem/copernicus-dem.png
-Resolution: 30m and 90m 
+Resolution: 30m and 90m
 GeographicalCoverage: Land ([more info](https://spacedata.copernicus.eu/web/cscda/dataset-details?articleId=394198)) under "Area of Interest"
 TemporalAvailability: static product(two releases 2019 & 2020) for data acquired in (2011-2015)
 UpdateFrequency: Updated as soon as new release is available publicly
@@ -31,10 +32,9 @@ Tags:
   - raster
   - open data
   - systematic
-
-License: "[License](https://spacedata.copernicus.eu/documents/20126/0/CSCDA_ESA_Mission-specific+Annex+%281%29.pdf/83b44c0a-244a-7ba3-b00c-b578a34e88a7?t=1604070311399) (Pages 15-20)"
+License: "[License](https://spacedata.copernicus.eu/en/web/guest/collections/copernicus-digital-elevation-model/#Licencing)"
 LicenseType: proprietary 
-LicenseUrl: https://spacedata.copernicus.eu/documents/20126/0/CSCDA_ESA_Mission-specific+Annex+%281%29.pdf/83b44c0a-244a-7ba3-b00c-b578a34e88a7?t=1604070311399
+LicenseUrl: https://spacedata.copernicus.eu/en/web/guest/collections/copernicus-digital-elevation-model/#Licencing
 Resources:
   - Group: Sentinel Hub Resources
     EndPoint: https://services.sentinel-hub.com
@@ -99,8 +99,8 @@ Extent:
   temporal:
     interval:
       -
-        - '2010-12-12T05:04:33Z'
-        - '2015-01-16T01:37:12Z'
+        - null
+        - null
 CubeDimensions:
   x:
     type: spatial
@@ -119,8 +119,8 @@ CubeDimensions:
   t:
     type: temporal
     extent:
-      - '2010-12-12T05:04:33Z'
-      - '2015-01-16T01:37:12Z'
+      - null
+      - null
   bands:
     type: bands
     values:
@@ -134,10 +134,20 @@ Summaries:
         value:
         - - 0.000277777777778
           - 0.000277777777778
-        - - 0.000833333333333
-          - 0.000833333333333
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 9000
     - description: The mask of data/no data pixels.
       name: dataMask
+      data_type: uint8
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
 RegistryEntryAdded: "2020-11-30"
-RegistryEntryLastModified: "2022-02-10"
+RegistryEntryLastModified: "2023-01-03"

@@ -1,4 +1,5 @@
 Name: Landsat 7 ETM+ L2
+OpenEOPID: LANDSAT7_ETM_L2
 Description: |
  The Landsat 7 Enhanced Thematic Mapper (ETM+) sensor is carried onboard Landsat 7. ETM+ provides 7 spectral bands and 1 thermal band.
  See [USGS EROS Archive](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-landsat-archives-landsat-7-etm-plus-collection-2-level-2?qt-science_center_objects=0#qt-science_center_objects) for more information. Landsat 7 level-2 data provides atmospherically corrected Surface Reflectance and Surface Brightness Temperature products. Level-2 data are available since April 1999.
@@ -9,7 +10,7 @@ EOBrowser: https://apps.sentinel-hub.com/eo-browser/?zoom=10&lat=41.87876&lng=12
 Resolution: 30 m (thermal band is re-sampled from 60 m)
 GeographicalCoverage: Global land
 TemporalAvailability: April 1999 - ongoing
-UpdateFrequency: Landsat data are added regularly,as soon as they are available in USGS AWS cloud 
+UpdateFrequency: Landsat data are added regularly,as soon as they are available in USGS AWS cloud
 BandInformation: Information about [bands and data](https://docs.sentinel-hub.com/api/latest/data/landsat-etm-l2/#available-bands-and-data)
 Contact: https://forum.sentinel-hub.com/c/euro-data-cube/
 Provider: "[USGS](https://www.usgs.gov/)"
@@ -36,7 +37,7 @@ Resources:
     Name: Sentinel Hub
     Role: processor
     Type: landsat-etm-l2
-    Notes: Global coverage since April 1999. 
+    Notes: Global coverage since April 1999.
     Primary: true
   - Group: xcube Resources
     DatasetName: landsat-etm-l2
@@ -239,6 +240,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - center_wavelength: 0.56
       common_name: green
       description: 	Green (520-600 nm)
@@ -249,6 +256,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - center_wavelength: 0.66
       common_name: red
       description: Red (630-690 nm)
@@ -259,6 +272,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - center_wavelength: 0.835
       common_name: nir
       description: Near Infrared (NIR) (770-900 nm)
@@ -269,6 +288,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - center_wavelength: 1.65
       common_name: swir16
       description: Shortwave Infrared (SWIR) 1 (1550-1750 nm)
@@ -279,6 +304,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - center_wavelength: 11.45
       common_name: lwir
       description: Thermal Infrared (10400-12500 nm)
@@ -289,6 +320,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 250
+        maximum:
+          - 320
     - center_wavelength: 2.22
       common_name: swir22
       description: Shortwave Infrared (SWIR) 2 (2090-2350 nm)	
@@ -299,6 +336,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - description: Quality Assessment band (QA)
       name: BQA
       openeo:gsd:
@@ -306,6 +349,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: uint16
     - description: Radiometric Saturation and Terrain Occlusion Quality Assessment Band
       name: QA_RADSAT
       openeo:gsd:
@@ -313,6 +357,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: uint16
     - description: Surface Temperature Uncertainty
       name: ST_QA
       openeo:gsd:
@@ -320,6 +365,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
     - description: Level-1 thermal band converted to thermal surface radiance
       name: ST_TRAD
       openeo:gsd:
@@ -327,6 +373,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
     - description: Upwelled Radiance
       name: ST_URAD
       openeo:gsd:
@@ -334,6 +381,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
     - description: Downwelled Radiance
       name: ST_DRAD
       openeo:gsd:
@@ -341,6 +389,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
     - description: Atmospheric Transmittance
       name: ST_ATRAN
       openeo:gsd:
@@ -348,6 +397,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - description: Emissivity estimated from ASTER GED
       name: ST_EMIS
       openeo:gsd:
@@ -355,6 +410,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - description: Emissivity standard deviation
       name: ST_EMSD
       openeo:gsd:
@@ -362,6 +423,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - description: Pixel distance to cloud
       name: ST_CDIST
       openeo:gsd:
@@ -369,6 +436,7 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
     - description: Internal SR Atmospheric Opacity
       name: SR_ATMOS_OPACITY
       openeo:gsd:
@@ -376,6 +444,12 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: int16
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
     - description: Cloud Quality Assessment
       name: SR_CLOUD_QA
       openeo:gsd:
@@ -383,11 +457,18 @@ Summaries:
           - 30
           - 30
         unit: m
+      data_type: uint8
     - description: The mask of data/no data pixels.
       name: dataMask
+      data_type: uint8
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
   eo:cloud_cover:
-    - 0
-    - 100
+    minimum: 0
+    maximum: 100
   platform:
     - landsat-7
 CRS:
@@ -531,6 +612,6 @@ CRS:
   - "http://www.opengis.net/def/crs/EPSG/0/32758"
   - "http://www.opengis.net/def/crs/EPSG/0/32759"
   - "http://www.opengis.net/def/crs/EPSG/0/32760"
-  - "http://www.opengis.net/def/crs/SR-ORG/0/98739"      
+  - "http://www.opengis.net/def/crs/SR-ORG/0/98739"
 RegistryEntryAdded: "2021-07-16"
-RegistryEntryLastModified: "2022-06-17"
+RegistryEntryLastModified: "2022-11-23"

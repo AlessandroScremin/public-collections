@@ -1,4 +1,5 @@
 Name: Population_density
+OpenEOPID: POPULATION_DENSITY
 Description: Gridded Population of the World v4 for year 2020
 AdditionalInfoExternal:
     Title: Additional info
@@ -7,7 +8,7 @@ Image: population_density/population_density.png
 EDCBrowser: https://browser.eurodatacube.com/?zoom=3&lat=21.89208&lng=-48.28697&collectionId=population_density&layerId=Population%20Density&type=sentinel-hub-edc&fromTime=2019-12-31T23%3A59%3A59.000Z&toTime=2020-12-31T23%3A59%3A59.000Z
 Resolution: 1000m
 GeographicalCoverage: -180.0, -90.0, 179.99999999999983, 89.99999999999991
-TemporalAvailability: "2020"
+TemporalAvailability: "2020-05-01"
 UpdateFrequency: 5 years
 BandInformation: populationDensity
 Contact: "[SEDAC-Socioeconomic Data and Applications Center](https://sedac.ciesin.columbia.edu/data/collection/gpw-v4)"
@@ -32,7 +33,7 @@ WMTS:
   - href: https://services.sentinel-hub.com/ogc/wmts/9b12a1a1-d4ca-45ae-a345-311accb663a5
     layer_id: POPULATION-DENSITY
     dimensions: 
-      warnings: true    
+      warnings: true
 Configurations:
   - href: "https://docs.sentinel-hub.com/api/latest/api/process/"
     rel: "about"
@@ -56,8 +57,8 @@ Extent:
   temporal:
     interval:
       -
-        - '2020-01-01T00:00:00Z'
-        - '2020-12-31T23:59:59Z'
+        - '2020-05-01T00:00:00Z'
+        - '2020-05-01T00:00:01Z'
 CubeDimensions:
   x:
     type: spatial
@@ -76,12 +77,12 @@ CubeDimensions:
   t:
     type: temporal
     extent:
-      - '2020-01-01T00:00:00Z'
-      - '2020-12-31T23:59:59Z'
+      - '2020-05-01T00:00:00Z'
+      - '2020-05-01T00:00:01Z'
   bands:
     type: bands
     values:
-      - populationDensity   
+      - populationDensity 
 Summaries:
   raster:bands:
     - description: Population density
@@ -92,4 +93,4 @@ Summaries:
         - 0.009920634920333
         unit: °
 RegistryEntryAdded: "2021-05-07"
-RegistryEntryLastModified: "2022-06-22"
+RegistryEntryLastModified: "2022-08-09"

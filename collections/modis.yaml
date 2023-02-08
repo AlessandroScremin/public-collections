@@ -1,14 +1,15 @@
 Name: MODIS MCD43A4.006
+OpenEOPID: MODIS
 Description: |
  [MODIS](https://modis.gsfc.nasa.gov/about/) (Moderate Resolution Imaging Spectroradiometer) is the main
  instrument operating on both NASA's [Terra](https://terra.nasa.gov/) and [Aqua](https://aqua.nasa.gov/) satellites.
  It acquires images of the earth in 36 bands within the visible and the infrared regions of the spectrum at low to medium spatial resolutions. 
- MODIS is designed to provide atleast daily observations of land, oceans and lower atmosphere that contribute to
+ MODIS is designed to provide at least daily observations of land, oceans and lower atmosphere that contribute to
  local or global scale land or water applications. There are several products derived from MODIS which include land, atmosphere, cryospehere and ocean products.
  MCD43A4 Nadir BRDF-Adjusted Reflectance (NBAR) product Version 6 is a MODIS land product available in Sentinel Hub. 
- It is computed daily  for each of MODIS bands 1 - 7 and it contains the most representative pixels from 16 day period temporarily weighted to the ninth day.
- MCD43A4.006 is available since February 2000 on a daily basis but with a 8 days delay. 
-Documentation: "[here](https://docs.sentinel-hub.com/api/latest/data/modis/mcd/)" 
+ It is computed daily for each of MODIS bands 1 - 7 and it contains the most representative pixels from 16 day period temporarily weighted to the ninth day.
+ MCD43A4.006 is available since February 2000 on a daily basis but with a 8 days delay.
+Documentation: "[here](https://docs.sentinel-hub.com/api/latest/data/modis/mcd/)"
 Image: modis/modis.png
 EDCBrowser: https://browser.eurodatacube.com/?zoom=10&lat=41.9&lng=12.5&collectionId=modis&layerId=True%20Color&type=sentinel-hub-edc&fromTime=2021-03-04T16%3A13%3A10.878Z&toTime=2022-03-04T16%3A13%3A10.878Z
 EOBrowser: https://apps.sentinel-hub.com/eo-browser/?zoom=10&lat=41.9&lng=12.5&themeId=DEFAULT-THEME&datasetId=MODIS&fromTime=2021-03-29T00:00:00.000Z&toTime=2021-03-29T23:59:59.999Z&layerId=1-TRUE-COLOR&visualizationUrl=https://services.sentinel-hub.com/ogc/wms/a322e0b3-0652-4c62-8dde-404781863e5f
@@ -16,9 +17,9 @@ Resolution: 500m
 GeographicalCoverage: MCD43A4.006 product covers Land ([more info](https://modis.gsfc.nasa.gov/about/specifications.php))
 TemporalAvailability: February 2000 - ongoing
 UpdateFrequency: MODIS data are added regularly, usually within few hours after they are available on the USGS archive
-BandInformation: Information about [bands and data](https://docs.sentinel-hub.com/api/latest/data/modis/mcd/#available-bands-and-data)  
+BandInformation: Information about [bands and data](https://docs.sentinel-hub.com/api/latest/data/modis/mcd/#available-bands-and-data)
 Contact: https://forum.sentinel-hub.com/c/euro-data-cube/25
-Provider: "[USGS](https://www.usgs.gov/)" 
+Provider: "[USGS](https://www.usgs.gov/)"
 ManagedBy: "[Sentinel Hub](https://www.sentinel-hub.com/)"
 Tags:
   - sentinel hub
@@ -35,7 +36,7 @@ Tags:
   - terra
   - aqua
 License: "[License](https://www.usgs.gov/centers/eros/data-citation?qt-science_support_page_related_con=0#qt-science_support_page_related_con)"
-LicenseType: proprietary 
+LicenseType: proprietary
 LicenseUrl: https://www.usgs.gov/centers/eros/data-citation?qt-science_support_page_related_con=0#qt-science_support_page_related_con
 Resources:
   - Group: Sentinel Hub Resources
@@ -53,7 +54,7 @@ CustomScripts:
 WMTS:
   - href: https://services-uswest2.sentinel-hub.com/ogc/wmts/ce4588f8-5f20-4334-9c07-b36ac0765768
     layer_id: TRUE-COLOR
-    dimensions: 
+    dimensions:
       warnings: true
 Configurations:
   - href: "https://docs.sentinel-hub.com/api/latest/api/process/"
@@ -168,6 +169,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: NIR (841 - 876 nm)
       name: B02
       common_name: nir
@@ -178,6 +185,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: Blue (459 - 479 nm)
       name: B03
       common_name: blue
@@ -188,6 +201,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: Green (545 - 565 nm)
       name: B04
       common_name: green
@@ -198,6 +217,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: N/A (1230 - 1250 nm)
       name: B05
       center_wavelength: 1.24
@@ -207,6 +232,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: SWIR16 (1628 - 1652 nm)
       name: B06
       common_name: swir16
@@ -217,6 +248,12 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: SWIR22 (2105 - 2155 nm)
       name: B07
       common_name: swir22
@@ -227,8 +264,20 @@ Summaries:
           - 0.004960317460317
           - 0.004960317460317
         unit: °
+      data_type: float32
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 0.4
     - description: The mask of data/no data pixels.
       name: dataMask
+      data_type: uint8
+      statistics:
+        minimum:
+          - 0
+        maximum:
+          - 1
   gsd:
     - 500
   platform:
@@ -375,6 +424,6 @@ CRS:
   - "http://www.opengis.net/def/crs/EPSG/0/32758"
   - "http://www.opengis.net/def/crs/EPSG/0/32759"
   - "http://www.opengis.net/def/crs/EPSG/0/32760"
-  - "http://www.opengis.net/def/crs/SR-ORG/0/98739"      
+  - "http://www.opengis.net/def/crs/SR-ORG/0/98739"
 RegistryEntryAdded: "2018-04-17"
-RegistryEntryLastModified: "2022-06-17"
+RegistryEntryLastModified: "2022-11-23"
